@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Получение прогноза погоды</title>
+</head>
+<style>
+    * {
+        font-size: 32px;
+    }
+
+    span {
+        color: red;
+        font-size: 32px;
+    }
+
+    form {
+        margin: 24px 0;
+    }
+
+    input, button {
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+</style>
+
+<body>
+    <form id="city-form">
+        <label for="city-input">Введите город:</label>
+        <input id="city-input" name="city" type="text" placeholder="" required>
+        <button type="submit">Показать погоду</button>
+    </form>
+    <h1>Прогноз погоды - <span id="city"></span></h1>
+    <div id="weather" role="status" aria-live="polite"></div>
+    <img id="img" />
+
+    <div id="sunset"></div>
+    <div id="sunrise"></div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
